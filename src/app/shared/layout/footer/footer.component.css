@@ -1,0 +1,13 @@
+.corFundoFooter {
+    color: white;
+    background: linear-gradient(to right, #575c5a, rgba(0, 0, 0, 0.8));
+    padding: 10px;
+    font-size: 12px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+  
+  }
+  
+  .bloco {
+    display: block;
+  }
+  

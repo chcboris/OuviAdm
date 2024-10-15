@@ -1,0 +1,52 @@
+.corMatBar {
+    background-color: #E0E0E0 !important;
+    background: linear-gradient(to right, #E0E0E0, rgba(209, 211, 209, 0.8));
+  }
+  .alturaLinha {
+    margin-top: 10px;
+    height: 40px;
+  }
+  .corLinhaMenu {
+    background: linear-gradient(to right, #00695C, rgba(0, 65, 0, 0.8));
+    color: whitesmoke;
+  }
+  .alinharmentoVerticalTop {
+    vertical-align: top;
+  }
+  .treLogo {
+    width: 48px;
+    height: 48px;
+  }
+  .preseLogo {
+    color: #00695C;
+    font-size: 22px;
+  }
+  .fonteNome {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bold;
+    font-style: italic;
+    font-size: 16px;
+    padding: 5px;
+    color: black;
+  }
+  .alinharDireita {
+   float: right;
+  }
+  .alinharCentro {
+    text-align: center;
+  }
+  .padding10 {
+    padding: 10px;
+  }
+  .usuarioLogado {
+    font-size: 0.6vw !important;
+    vertical-align: text-bottom;
+    margin-left: 5px;
+  }
+  .margemDireita5 {
+    margin-right: 5px !important;
+  }
+  .alinharDireita {
+    text-align: right;
+  }
+  

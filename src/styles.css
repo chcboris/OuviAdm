@@ -1,1 +1,30 @@
 /* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+/* Fontes básicos */
+.negrito {
+  font-weight: bold !important;
+}
+
+.italico {
+  font-style: italic !important;
+}
+mat-form-field{
+  width: 100%;
+}
+
+.alinharDireita {
+  float: right;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.corMarrom{
+  color: rgb(243, 143, 77) !important;
+}
+
+
