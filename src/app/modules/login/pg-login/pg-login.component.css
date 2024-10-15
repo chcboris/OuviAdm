@@ -1,0 +1,19 @@
+.textoErro {
+    color: red;
+    text-align: center;
+    font-size: 14px;
+  }
+  
+  .caixaCentro{
+    margin-top: 25vh;
+  }
+  .alinharDireita {
+    text-align: right;
+  }
+  .tamanho20 {
+    font-size: 20px !important;
+  }
+  .tamanho28 {
+    font-size: 28px !important;
+  }
+  

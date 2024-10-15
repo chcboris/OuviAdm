@@ -4,8 +4,14 @@ import { PgConsultaOcorrenciaComponent } from './modules/ocorrencia/pg-consulta-
 import { PgConsultaAssuntoComponent } from './modules/assunto/pg-consulta-assunto/pg-consulta-assunto.component';
 import { PgCadastroAssuntoComponent } from './modules/assunto/pg-cadastro-assunto/pg-cadastro-assunto.component';
 import { PrincipalComponent } from './shared/layout/principal/principal.component';
+import { PgLoginComponent } from './modules/login/pg-login/pg-login.component';
 
 export const routes: Routes = [
+  {
+    path: 'login',
+    pathMatch: 'full',
+    component: PgLoginComponent
+  },
     {
         path: '',
         component: PrincipalComponent,

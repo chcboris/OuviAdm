@@ -1,3 +1,4 @@
+
 <div class="d-flex flex-column min-vh-100">
 
       <header>
@@ -13,12 +14,34 @@
       <footer class="mt-auto">
         <app-footer></app-footer>
       </footer>
+</div>
 
 <!--
-      <div class="fundo" [ngStyle]="backgroundImage()">
-        <main role="main" class="container-fluid padding30" aria-label="main">
-          
-        </main>
-      </div>
--->
+<div class="d-flex flex-column min-vh-100">
+@if(isLogado()){
+  <div >
+  <header>
+    <app-header role="navigation"></app-header>
+  </header>
+
+  <main role="main" aria-label="main">
+    <div class="pt-4 pb-4">
+      <router-outlet></router-outlet>
+    </div>
+  </main>
+
+  <footer class="mt-auto">
+    <app-footer></app-footer>
+  </footer>
 </div>
+} @else{
+<div class="fundo" [ngStyle]="//assets//img//fundoLogin2.png">
+  <main role="main" class="container-fluid padding30" aria-label="main">
+    <div class="pt-4">
+      <app-pg-login></app-pg-login>
+    </div>
+  </main>
+</div>
+}
+</div>
+-->
