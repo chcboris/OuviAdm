@@ -6,6 +6,7 @@ import { FooterComponent } from './shared/layout/footer/footer.component';
 import { Constantes } from './shared/util/constantes';
 import { PgLoginComponent } from './modules/login/pg-login/pg-login.component';
 
+
 @Component({
   selector: 'app-root',
   standalone: true,
@@ -18,11 +19,17 @@ export class AppComponent {
   enderecoFundo:string = '';
 
   isLogado() {
-    return false; //sessionStorage.getItem('usuario') ? true : false;
+    let st: boolean;
+    //st = sessionStorage.getItem('usuario') ? true : false;
+    st = sessionStorage.getItem('analise') ? true : false;
+    return st;
+    //return sessionStorage.getItem('usuario') ? true : false;
   }
 
+
+
   backgroundImage(){
-    this.enderecoFundo = Constantes.imagePath + 'fundo.png';
+    this.enderecoFundo = Constantes.imagePath + 'fundo3.png';
     return {'background-image': 'url(' + this.enderecoFundo + ')'}
   }
 }

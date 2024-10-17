@@ -18,14 +18,22 @@
             </div>
         </mat-toolbar-row>
 
+
         <mat-toolbar-row class="alturaLinha corLinhaMenu">
-            <div class="col-lg-9 col-md-9 col-sm-8">
+          @if(!isOco){
+          <div class="col-lg-9 col-md-9 col-sm-8">
               <button mat-button  [matMenuTriggerFor]="menuOcorrencia" ><mat-icon aria-hidden="false" aria-label="Seta pra baixo" fontIcon="keyboard_arrow_down"></mat-icon>Ocorrência</button>
               <mat-menu #menuOcorrencia="matMenu">
-                  <button mat-menu-item>Cadastro</button>
-                  <button mat-menu-item>Consulta</button>
+                  <button mat-menu-item (click)="menuNavegacao('/CadastroOcorrencia')">Cadastrar</button>
+                  <button mat-menu-item (click)="menuNavegacao('/ConsultaOcorrencia')">Listar</button>
               </mat-menu>
-    
+             
+              <button mat-button  [matMenuTriggerFor]="menuPrazo" ><mat-icon aria-hidden="false" aria-label="Seta pra baixo" fontIcon="keyboard_arrow_down"></mat-icon>Prazos</button>
+              <mat-menu #menuPrazo="matMenu">
+                  <button mat-menu-item (click)="menuNavegacao('/CadastroOcorrencia')">Listar</button>
+                  <button mat-menu-item (click)="menuNavegacao('/ConsultaOcorrencia')">Suspensão</button>
+              </mat-menu>
+
               <button mat-button  [matMenuTriggerFor]="menuManutencao" ><mat-icon aria-hidden="false" aria-label="Seta pra baixo" fontIcon="keyboard_arrow_down"></mat-icon>Manutenção</button>
               <mat-menu #menuManutencao="matMenu">
                   <button mat-menu-item [matMenuTriggerFor]="menuAssunto">Assunto</button>
@@ -33,35 +41,75 @@
               </mat-menu>
     
               <mat-menu #menuAssunto="matMenu">
-                <button mat-menu-item >Cadastro</button>
-                <button mat-menu-item >Consulta</button>
+                <button mat-menu-item (click)="menuNavegacao('/CadastroAssunto')">Cadastrar</button>
+                <button mat-menu-item (click)="menuNavegacao('/ConsultaAssunto')">Consultar</button>
               </mat-menu>
     
               <mat-menu #menuUnidade="matMenu">
-                <button mat-menu-item >Cadastro</button>
-                <button mat-menu-item >Consulta</button>
+                <button mat-menu-item >Cadastrar</button>
+                <button mat-menu-item >Consultar</button>
               </mat-menu>  
-              
-            </div>
-            <div class="col-lg-3 col-md-3 col-sm-4">
-              <div class="row">
-                <div class="col-9">
-                  <button mat-icon-button aria-label="Usuário Logado">
-                    <mat-icon>person</mat-icon>
-                    <span class="usuarioLogado" [innerHTML]="descricaoUsuarioLogado()"></span>
-                  </button>
-                </div>
-                <div class="col-2">
-                  <button mat-icon-button aria-label="Botão Sair">
-                    <mat-icon aria-hidden="false" aria-label="Icone sair" fontIcon="exit_to_app"></mat-icon>
-                    <span class="usuarioLogado">Sair</span>
-                  </button>
-                </div>
-    
-              </div>
-            </div>
-          </mat-toolbar-row>
 
+              <button mat-button  [matMenuTriggerFor]="menuRelatorio" ><mat-icon aria-hidden="false" aria-label="Seta pra baixo" fontIcon="keyboard_arrow_down"></mat-icon>Metabase</button>
+              <mat-menu #menuRelatorio="matMenu">
+                  <button mat-menu-item [matMenuTriggerFor]="menuConsultaOcorrencia">Ocorrências</button>
+                  <button mat-menu-item [matMenuTriggerFor]="menuConsultaEstatistica">Estatística</button>
+                  <button mat-menu-item >Pesq. Satisfação</button>
+              </mat-menu>
+    
+              <mat-menu #menuConsultaOcorrencia="matMenu">
+                <button mat-menu-item >Não tratadas</button>
+                <button mat-menu-item >Não respondidas</button>
+              </mat-menu>
+    
+              <mat-menu #menuConsultaEstatistica="matMenu">
+                <button mat-menu-item >Assuntos</button>
+                <button mat-menu-item >Escolaridade</button>
+                <button mat-menu-item >Forma de recebimento</button>
+                <button mat-menu-item >Sexo</button>
+                <button mat-menu-item >Pesq. satisfação</button>
+                <button mat-menu-item >Tipos de finalização</button>
+                <button mat-menu-item >Unidades</button>  
+                <button mat-menu-item >Qtde. / Tempo. Médio</button>              
+              </mat-menu>  
+
+            </div>
+          
+        }
+        @else{
+          
+            <div class="col-lg-9 col-md-9 col-sm-8">
+              <button mat-button  [matMenuTriggerFor]="menuDetalhe" ><mat-icon aria-hidden="false" aria-label="Seta pra baixo" fontIcon="keyboard_arrow_down"></mat-icon>Ações</button>
+              <mat-menu #menuDetalhe="matMenu">                  
+                  <button mat-menu-item>Ocorrência</button>
+                  <button mat-menu-item>Resposta</button>
+                  <button mat-menu-item>Pedido de Informação</button>
+                  <button mat-menu-item>Encaminhamento</button>
+                  <button mat-menu-item (click)="retornarTelaPrincipal()">Tela Principal</button>
+              </mat-menu>
+            </div>
+
+        }    
+
+        <div class="col-lg-3 col-md-3 col-sm-4">
+          <div class="row">
+            <div class="col-9">
+              <button mat-icon-button aria-label="Usuário Logado">
+                <mat-icon>person</mat-icon>
+                <span class="usuarioLogado" [innerHTML]="descricaoUsuarioLogado()"></span>
+              </button>
+            </div>
+            <div class="col-2">
+              <button mat-icon-button aria-label="Botão Sair" (click)="logOut()">
+                <mat-icon aria-hidden="false" aria-label="Icone sair" fontIcon="exit_to_app"></mat-icon>
+                <span class="usuarioLogado">Sair</span>
+              </button>
+            </div>
+
+          </div>
+        </div>
+
+      </mat-toolbar-row>
     </mat-toolbar>
   </nav>
   
