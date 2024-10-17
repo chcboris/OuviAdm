@@ -22,7 +22,7 @@ export class AppComponent {
   }
 
   backgroundImage(){
-    this.enderecoFundo = Constantes.imagePath + 'fundoLogin2.png';
+    this.enderecoFundo = Constantes.imagePath + 'fundo.png';
     return {'background-image': 'url(' + this.enderecoFundo + ')'}
   }
 }

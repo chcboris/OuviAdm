@@ -16,4 +16,8 @@
   .tamanho28 {
     font-size: 28px !important;
   }
-  
+  .example-button-row {
+    display: table-cell;
+    text-align: center;
+    width: 100%;
+  }

@@ -20,7 +20,7 @@ import { DialogLoadModuleModule } from '../../../shared/util/dialog-module/dialo
 })
 export class PgLoginComponent implements AfterContentInit, OnDestroy{
 
-  constructor(private fb: FormBuilder, private usuarioService:UsuarioService, private router:Router,private dialog: MatDialog,) {}  
+  constructor(private fb: FormBuilder, private router:Router,private dialog: MatDialog,) {}  //private usuarioService:UsuarioService,
   
   loginValido: boolean = true;
   formUsuario!: FormGroup;
@@ -32,7 +32,7 @@ export class PgLoginComponent implements AfterContentInit, OnDestroy{
   versaoAtual = Constantes.versaoAtual;
 
   ngAfterContentInit() {
-    this.createFormLogin(new Usuario());
+//    this.createFormLogin(new Usuario());
   }
 
   createFormLogin(usuario: Usuario) {

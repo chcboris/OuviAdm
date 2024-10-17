@@ -15,9 +15,18 @@ header {
   }
 
   .fundo {
-    background-color: #575c5a !important;
+    display: block;
+    width: 100vw;
     height: 100vh;
-    width: 100%;
+    padding: 0;
+    text-align: center;
+    color: white;    
+    background-position: 30% 45%;
+    background-color: black;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
   }
 
   @media screen and (max-height: 800px){
