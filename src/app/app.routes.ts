@@ -5,6 +5,7 @@ import { PgConsultaAssuntoComponent } from './modules/assunto/pg-consulta-assunt
 import { PgCadastroAssuntoComponent } from './modules/assunto/pg-cadastro-assunto/pg-cadastro-assunto.component';
 import { PrincipalComponent } from './shared/layout/principal/principal.component';
 import { PgLoginComponent } from './modules/login/pg-login/pg-login.component';
+import { PgOcorrenciaComponent } from './modules/ocorrencia/pg-ocorrencia/pg-ocorrencia.component';
 
 export const routes: Routes = [
   {
@@ -31,5 +32,9 @@ export const routes: Routes = [
       {
         path: 'ConsultaAssunto',
         component: PgConsultaAssuntoComponent,
+      },
+      {
+        path: 'Ocorrencia',
+        component: PgOcorrenciaComponent,
       }
 ];
