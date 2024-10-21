@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { SharedModule } from '../../../shared/shared.module';
 import { Criptografia } from '../../../shared/util/criptografia';
 import { Analise } from '../../../shared/models/tre/analise';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-pg-consulta-ocorrencia',
@@ -13,6 +14,8 @@ import { Analise } from '../../../shared/models/tre/analise';
 export class PgConsultaOcorrenciaComponent {
 
   analise: Analise = new Analise();
+
+  constructor(private router:Router) { }
 
   tratar() {
     // this.openDialog();
@@ -50,6 +53,10 @@ export class PgConsultaOcorrenciaComponent {
   this.analise.idOcorencia = 100;
 
   sessionStorage.setItem("analise", Criptografia.encode(JSON.stringify(this.analise)));
-  }
+ 
+  this.router.navigate(['Ocorrencia']);
+}
+
+ 
 
 }

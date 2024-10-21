@@ -60,9 +60,9 @@ export class PgLoginComponent implements OnInit, OnDestroy{
   //     next: (res) => {
   //       this.usuario = res;
      
-         this.analise.login = login.toUpperCase();
-         //sessionStorage.setItem("usuario", Criptografia.encode(JSON.stringify(this.usuario)));
-         sessionStorage.setItem("analise", Criptografia.encode(JSON.stringify(this.analise)));
+         //this.analise.login = login.toUpperCase();
+         sessionStorage.setItem("usuario", Criptografia.encode(JSON.stringify(this.usuario)));
+         //sessionStorage.setItem("analise", Criptografia.encode(JSON.stringify(this.analise)));
          this.closeDialog();
          this.router.navigate(['']);
   //     },

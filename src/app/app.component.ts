@@ -20,8 +20,8 @@ export class AppComponent {
 
   isLogado() {
     let st: boolean;
-    //st = sessionStorage.getItem('usuario') ? true : false;
-    st = sessionStorage.getItem('analise') ? true : false;
+    st = sessionStorage.getItem('usuario') ? true : false;
+   // st = sessionStorage.getItem('analise') ? true : false;
     return st;
     //return sessionStorage.getItem('usuario') ? true : false;
   }

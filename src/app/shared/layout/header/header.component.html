@@ -20,7 +20,7 @@
 
 
         <mat-toolbar-row class="alturaLinha corLinhaMenu">
-          @if(!isOco){
+          <!--@if(!isOco){ -->
           <div class="col-lg-9 col-md-9 col-sm-8">
               <button mat-button  [matMenuTriggerFor]="menuOcorrencia" ><mat-icon aria-hidden="false" aria-label="Seta pra baixo" fontIcon="keyboard_arrow_down"></mat-icon>Ocorrência</button>
               <mat-menu #menuOcorrencia="matMenu">
@@ -73,9 +73,8 @@
                 <button mat-menu-item >Qtde. / Tempo. Médio</button>              
               </mat-menu>  
 
-            </div>
-          
-        }
+            </div>          
+<!--        }
         @else{
           
             <div class="col-lg-9 col-md-9 col-sm-8">
@@ -90,7 +89,7 @@
             </div>
 
         }    
-
+-->
         <div class="col-lg-3 col-md-3 col-sm-4">
           <div class="row">
             <div class="col-9">

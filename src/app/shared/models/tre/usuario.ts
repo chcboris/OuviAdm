@@ -7,5 +7,4 @@ export class Usuario {
   token?: string;
   servidor?: Servidor;
   perfis: PerfilAcesso[] = [];
-  perfilSimulado?: PerfilAcesso;
 }
